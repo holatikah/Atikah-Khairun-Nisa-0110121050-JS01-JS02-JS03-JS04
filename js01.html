@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function hitung(){
+            const rasio = 3.14;// konstanta 
+            let Jari = document.getElementById("jari2").value;
+            console.log("Jari jari : " + Jari);
+            let luas = rasio * Jari * Jari;
+            let klg = 2.0 * rasio * Jari;
+            console.log("luas : " + luas);
+            console.log("Keliling : " + klg);
+            let area_hasil1 = document.getElementById("hasiluas");
+            area_hasil1.innerHTML = luas 
+            let area_hasil2 = document.getElementById("hasilklg");
+            area_hasil2.innerHTML = klg
+
+                                     
+        }
+    </script>
+</head>
+<body>
+    <h3>Temukan luas dan keliling lingkaran</h3>
+    Masukan Jari Jari lingkaran :
+    <input type="number" value="" size="10" id="jari2">
+    <br/>
+    <button onclick="hitung()">Hitung</button>
+    <br/>
+    <br/>
+    <strong>Hasil Hitung</strong>
+    <br/>Luas : <span id="hasiluas"></span>
+    <br/>Keliling : <span id="hasilklg"></span>
+</body>
+</html>

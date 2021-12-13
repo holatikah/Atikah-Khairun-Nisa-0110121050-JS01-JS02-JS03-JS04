@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function hitung(){
+            let Masuk = document.getElementById("masuk").value;
+            let Keluar = document.getElementById("keluar").value;
+            let selisih = Keluar - Masuk;
+            let biaya =0;
+            const TarifAwal = 3000;
+            const TarifPerjam = 1000;
+            if (selisih <= 2){
+                biaya = TarifAwal;
+            }
+            else{
+                let tambahjam = selisih - 2;
+                biaya = TarifAwal + (TarifPerjam * tambahjam);
+            }
+            let area_biaya = document.getElementById("biaya");
+            area_biaya.innerHTML = "BIAYA PARKIR " + biaya;
+        }
+    </script>
+</head>
+<body>
+    <h3>Biaya Parkir</h3>
+    Masuk Parkir : <input type="number" value="" size="10" id="masuk">
+    <br/>
+    <br/>
+    Keluar Parkir : <input type="number" value="" size="10" id="keluar">
+    <br/>
+    <br/>
+    <button onclick="hitung()">Total</button> 
+    <span id="biaya"></span>
+</body>
+</html>

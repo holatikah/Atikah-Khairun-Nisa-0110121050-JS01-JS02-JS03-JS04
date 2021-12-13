@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function convert(){
+            const $ = 14.650; //satuandolar
+            let Rupiah = document.getElementById("rupiah").value;
+            console.log("IDR : " + Rupiah);
+            let Dollar = Rupiah / $;
+            console.log("USD : " + Dollar);
+            let Rounding = Math.round(Dollar);
+            console.log("Your Money : " + Rounding);
+            let area_dollar = document.getElementById("dollar");
+            area_dollar.innerHTML = Dollar
+            let area_rounding = document.getElementById("rounding");
+            area_rounding.innerHTML = Rounding
+        }
+    </script>
+</head>
+<body>
+    <h3>CURRENCY CONVERSION</h3>
+    <h4>Enter Your Money</h4>
+    IDR
+    <input type="currency" value="" size="10" id="rupiah">
+    <br/>
+    <br/>
+    <button onclick="convert()">convert</button>
+    <br/>
+    <h4><strong>Your Dollar Money</strong></h4>
+    USD : <span id="dollar"></span>
+    <br/>
+    <h4>Your Money :</h4>
+    $<strong id="rounding"></strong>
+</body>
+</html>
